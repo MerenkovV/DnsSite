@@ -2,16 +2,16 @@
 
 const Gallery = document.querySelector('.body__gallery');
 const Item = document.querySelectorAll('.body__item');
-const Scroll1 = document.querySelector('.scroll__wrapper');
+const Scroll1 = document.querySelectorAll('.scroll__wrapper');
 const NoDrag = document.querySelectorAll('img, a');
-const StartPosS1 = Scroll1.getBoundingClientRect().left;
+const StartPosS1 = [Scroll1[0].getBoundingClientRect().left, Scroll1[1].getBoundingClientRect().left];
 
 let IsClick = true;
 let Place = 0;
 let IsPressed = false;
-let speed;
+let NumberOfScroll;
 let ClientPos;
-let NewPos = 0;
+let NewPos = [0, 0];
 let DeltaPos;
 let PrevMs = 0;
 
@@ -58,30 +58,34 @@ function PrevPlace(){
     }
 }
 
-Scroll1.addEventListener('mousedown', function(e){
+document.addEventListener('mousedown', function(e){
     if(e.target.closest('.scroll__item')){
         IsPressed = true;
         ClientPos = e.clientX;
         IsClick = true;
     }
+    if(e.target.closest('.stories__scroll')){
+        NumberOfScroll = 1;
+    }else if(e.target.closest('.body__bottom')){
+        NumberOfScroll = 0;
+    }
 });
 
-Scroll1.addEventListener('mousemove', function(e){
+document.addEventListener('mousemove', function(e){
     if(IsPressed){
         DeltaPos = e.clientX - ClientPos;
         console.log(DeltaPos);
         IsClick = false;
         
-        if(Scroll1.getBoundingClientRect().left <= StartPosS1){
-            Scroll1.style.transform = `translateX(${DeltaPos + NewPos}px)`;
-        }else if(Scroll1.getBoundingClientRect().left > StartPosS1){
+        if(Scroll1[NumberOfScroll].getBoundingClientRect().left <= StartPosS1[NumberOfScroll]){
+            Scroll1[NumberOfScroll].style.transform = `translateX(${DeltaPos + NewPos[NumberOfScroll]}px)`;
+        }else if(Scroll1[NumberOfScroll].getBoundingClientRect().left > StartPosS1[NumberOfScroll]){
 
             if(DeltaPos < 0){
-                Scroll1.style.transform = `translateX(${DeltaPos}px)`;
-                NewPos = 0;
+                Scroll1[NumberOfScroll].style.transform = `translateX(${DeltaPos}px)`;
+                NewPos[NumberOfScroll] = 0;
             }else{
-                //Scroll1.style.transform = `translateX(${DeltaPos*0.6}px)`;
-                NewPos = 0;
+                NewPos[NumberOfScroll] = 0;
             }
         }
         
@@ -91,7 +95,7 @@ Scroll1.addEventListener('mousemove', function(e){
 document.addEventListener('mouseup', function(e){
     if(IsPressed){
         IsPressed = false;
-        NewPos += DeltaPos;
+        NewPos[NumberOfScroll] += DeltaPos;
     }
     
 });
