@@ -431,6 +431,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.42857;
 }
 
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 40;
+}
+
 .main__list li:nth-child(1)::before {
   content: "";
   position: absolute;
@@ -574,6 +578,33 @@ h1, h2, h3, h4, h5, h6 {
   width: 280px;
   top: -8px;
   left: 0px;
+}
+.main__up {
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+  right: calc((100% - 1182px) / 2 - 70px);
+  background: #ffffff;
+  bottom: 25px;
+  display: none;
+}
+.main__up:hover > span {
+  color: #2f2f2f;
+}
+.main__up > span {
+  font-size: 24px;
+  color: #8c8c8c;
+  pointer-events: none;
 }
 
 .body__top {
@@ -860,6 +891,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__menu {
   padding-top: 20px;
+}
+
+.container {
+  position: relative;
 }
 
 .menu__wrapper {

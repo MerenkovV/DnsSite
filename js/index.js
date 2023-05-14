@@ -6,6 +6,7 @@ const Scroll1 = document.querySelectorAll('.scroll__wrapper');
 const NoDrag = document.querySelectorAll('img, a');
 const StartPosS1 = [Scroll1[0].getBoundingClientRect().left, Scroll1[1].getBoundingClientRect().left];
 const Input = document.querySelector('.subscribe__input');
+const UP = document.querySelector('.main__up');
 const PlaceHolder = Input.placeholder;
 
 let IsClick = true;
@@ -21,9 +22,20 @@ Input.addEventListener("focus", function(event){
     Input.placeholder = "";
 });
 Input.addEventListener("blur", function(event){
-        Input.placeholder = PlaceHolder;
+    Input.placeholder = PlaceHolder;
 });
 
+document.addEventListener('scroll', () => {
+    if(window.pageYOffset > 50){
+        UP.style.display = "flex";
+    }else{
+        UP.style.display = "none";
+    }
+});
+
+UP.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+})
 
 NoDrag.forEach(element => {
     element.addEventListener('dragstart', function(event){
