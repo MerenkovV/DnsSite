@@ -223,10 +223,8 @@
         }
 }
 
-
-
 .main{
-    height: 2000px;
+    //height: 2000px;
 
     &__head {
         position: sticky;
@@ -363,7 +361,6 @@
     }
     
 }
-
 
 .main{
     &__list li:nth-child(1)::before{
@@ -598,7 +595,6 @@
     }
 }
 
-
 .item {
     flex: 0 0 183px;
     height: 206px;
@@ -652,7 +648,6 @@
         background: #ffefef url(https://cmp.dns-shop.ru/images/c97288867824cbe1ed8d.webp) no-repeat bottom/100%;
     } 
 }
-
 
 .lk {
     background: #fff7da url(https://cmp.dns-shop.ru/images/755ac8590433f3a6e50e.png) no-repeat bottom right;
@@ -790,6 +785,196 @@
         user-select: none;
     }
 }
+
+.footer {
+    margin-top: 64px;
+    background: #333;
+
+    &__sites {
+    }
+
+    &__menu {
+        padding-top: 20px;
+    }
+}
+.container {
+}
+.menu {
+
+    &__wrapper {
+        display: flex;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #4e4e4e;
+    }
+
+    &__company {
+        flex: 0 0 246px;
+    }
+
+    &__header {
+        font-family: 'PT Sans', sans-serif;
+        padding: 0 0 20px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 0 0 20px;
+        border-bottom: 1px solid #4e4e4e;
+    }
+
+    &__list {
+    }
+
+    &__customer {
+        flex: 0 0 514px;
+        margin-left: 60px;
+    }
+
+    &__list-wrapper {
+        display: flex;
+    }
+
+    &__list-wrapper > .list{
+        flex: 0 0 249px;
+    }
+
+    &__withus {
+        margin-left: 60px;
+    }
+
+    &__phone > a, span{
+        font-family: 'PT Sans', sans-serif;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        transition: .5s;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    &__adress {
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+        display: block;
+        padding-top: 10px;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    &__subscribe {
+        margin-top: 24px;
+    }
+
+    &__button-container {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    &__button {
+        cursor: pointer;
+        height: 38px;
+        width: 38px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    &__button > svg{
+        pointer-events: none;
+    }
+
+    &__app {
+        margin-top: 30px;
+        display: block;
+    }
+
+    &__copyright{
+        font-family: 'PT Sans', sans-serif;
+        padding: 16px 0;
+        font-size: 14px;
+        color: #999;
+        line-height: 20px;
+    }
+}
+.list {
+
+    &__item {
+        margin-bottom: 12px;
+    }
+
+    &__item > a{
+        font-family: 'PT Sans', sans-serif;
+        color: white;
+        font-size: 16px;
+        line-height: 1.42857;
+    }
+
+    &__item > a:hover{
+        color: #eb9201;
+    }
+}
+.subscribe {
+
+    &__header {
+        font-family: 'PT Sans', sans-serif;
+        color: #fff;
+        margin: 0 0 8px;
+        font-size: 16px;
+        white-space: nowrap;
+        line-height: 1.42857;
+    }
+
+    &__input-wrapper {
+        position: relative;
+        width: 280px;
+        height: 46px;
+        padding: 1px;
+        overflow: hidden;
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    &__input-wrapper > button {
+        position: absolute;
+        width: 33px;
+        height: 40px;
+        border-radius: 8px;
+        top: 3px;
+        right: 3px;
+        font-size: 20px;
+        color: #777;
+        cursor: pointer;
+        line-height: 40px;
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        border-radius: 8px;
+        color: #777;
+        font-size: 16px;
+        line-height: normal;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    &__input:focus {
+        border: 2px solid black;
+    }
+
+    &__agree {
+        color: #8c8c8c;
+        margin-top: 10px;
+        line-height: 14px;
+        font-size: 12px;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    &__link {
+        cursor: pointer;
+        color: #0d61af;
+    }
+}
+
 
 
 

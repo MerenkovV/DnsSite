@@ -5,6 +5,8 @@ const Item = document.querySelectorAll('.body__item');
 const Scroll1 = document.querySelectorAll('.scroll__wrapper');
 const NoDrag = document.querySelectorAll('img, a');
 const StartPosS1 = [Scroll1[0].getBoundingClientRect().left, Scroll1[1].getBoundingClientRect().left];
+const Input = document.querySelector('.subscribe__input');
+const PlaceHolder = Input.placeholder;
 
 let IsClick = true;
 let Place = 0;
@@ -15,7 +17,12 @@ let NewPos = [0, 0];
 let DeltaPos;
 let PrevMs = 0;
 
-
+Input.addEventListener("focus", function(event){
+    Input.placeholder = "";
+});
+Input.addEventListener("blur", function(event){
+        Input.placeholder = PlaceHolder;
+});
 
 
 NoDrag.forEach(element => {

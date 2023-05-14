@@ -303,9 +303,6 @@ h1, h2, h3, h4, h5, h6 {
   left: 24px;
 }
 
-.main {
-  height: 2000px;
-}
 .main__head {
   position: sticky;
   top: 0px;
@@ -855,6 +852,172 @@ h1, h2, h3, h4, h5, h6 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.footer {
+  margin-top: 64px;
+  background: #333;
+}
+.footer__menu {
+  padding-top: 20px;
+}
+
+.menu__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #4e4e4e;
+}
+.menu__company {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 246px;
+          flex: 0 0 246px;
+}
+.menu__header {
+  font-family: "PT Sans", sans-serif;
+  padding: 0 0 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #4e4e4e;
+}
+.menu__customer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 514px;
+          flex: 0 0 514px;
+  margin-left: 60px;
+}
+.menu__list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu__list-wrapper > .list {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 249px;
+          flex: 0 0 249px;
+}
+.menu__withus {
+  margin-left: 60px;
+}
+.menu__phone > a, .menu span {
+  font-family: "PT Sans", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: inline-block;
+  font-size: 16px;
+}
+.menu__adress {
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  display: block;
+  padding-top: 10px;
+  font-family: "PT Sans", sans-serif;
+}
+.menu__subscribe {
+  margin-top: 24px;
+}
+.menu__button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+.menu__button {
+  cursor: pointer;
+  height: 38px;
+  width: 38px;
+  display: block;
+  margin-right: 10px;
+}
+.menu__button > svg {
+  pointer-events: none;
+}
+.menu__app {
+  margin-top: 30px;
+  display: block;
+}
+.menu__copyright {
+  font-family: "PT Sans", sans-serif;
+  padding: 16px 0;
+  font-size: 14px;
+  color: #999;
+  line-height: 20px;
+}
+
+.list__item {
+  margin-bottom: 12px;
+}
+.list__item > a {
+  font-family: "PT Sans", sans-serif;
+  color: white;
+  font-size: 16px;
+  line-height: 1.42857;
+}
+.list__item > a:hover {
+  color: #eb9201;
+}
+
+.subscribe__header {
+  font-family: "PT Sans", sans-serif;
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: 16px;
+  white-space: nowrap;
+  line-height: 1.42857;
+}
+.subscribe__input-wrapper {
+  position: relative;
+  width: 280px;
+  height: 46px;
+  padding: 1px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+}
+.subscribe__input-wrapper > button {
+  position: absolute;
+  width: 33px;
+  height: 40px;
+  border-radius: 8px;
+  top: 3px;
+  right: 3px;
+  font-size: 20px;
+  color: #777;
+  cursor: pointer;
+  line-height: 40px;
+}
+.subscribe__input {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  border-radius: 8px;
+  color: #777;
+  font-size: 16px;
+  line-height: normal;
+  font-family: "PT Sans", sans-serif;
+}
+.subscribe__input:focus {
+  border: 2px solid black;
+}
+.subscribe__agree {
+  color: #8c8c8c;
+  margin-top: 10px;
+  line-height: 14px;
+  font-size: 12px;
+  font-family: "PT Sans", sans-serif;
+}
+.subscribe__link {
+  cursor: pointer;
+  color: #0d61af;
 }
 
 @media (max-width: 1190px) {
