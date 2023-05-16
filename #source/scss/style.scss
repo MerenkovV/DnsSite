@@ -20,11 +20,18 @@
 
         &__menu > ul > li{
             padding: 0 16px;
+            position: relative;
 		}
 
         &__menu > ul > li:first-child{
             padding: 0 200px 0 20px;
 		}
+
+        &__menu > ul > li:first-child > a > span{
+            position: absolute;
+            top: -1px;
+            left: -6px;
+        }
 
         &__menu > ul > li:last-child{
             padding: 0 0 0 80px;
@@ -118,9 +125,9 @@
 
         &__search-wrapper:hover {
             background: #ffffff;
-            border: 1px solid #f2f2f2;
             box-shadow: 0px 3px 15px 0px #d7d7d7;
         }
+
 
         &__search-wrapper {
             position: relative;
@@ -368,6 +375,15 @@
     'wght' 300,
     'GRAD' 0,
     'opsz' 40
+}
+
+#symbol-one{
+    font-size: 18px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24
 }
 
 .main{
