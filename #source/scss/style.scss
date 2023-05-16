@@ -726,6 +726,10 @@
         margin-top: 40px;
     }
 
+    &__buttons > div {
+        cursor: pointer;
+    }
+
     &__enter {
         padding: 12px 15px;
         background: #ffffff;
@@ -798,6 +802,10 @@
         font-size: 14px;
         cursor: pointer;
         line-height: 23px;
+    }
+
+    &__text > a:hover{
+        color: #f29601;
     }
 }
 
